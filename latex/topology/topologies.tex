@@ -1,0 +1,202 @@
+\documentclass{beamer}
+
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {figures/} }
+ 
+
+\title[Your Short Title]{Performance comparison of different topologies}
+\author{Subin Joseph}
+\institute{TU Kaiserslautern}
+\date{06/09/2016}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+%\begin{frame}{Outline}
+%  \tableofcontents
+%\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Introduction}
+
+
+
+\begin{itemize}
+  \item Focus on the reliability comparison of different topologies through a quantitative study
+  \item Compare the data latency,throughput and delta time of following topolgies
+  \begin{itemize}
+  	\item Edge computing topology
+  	\item Cloud computing topology
+  	\item Edge plus cloud computing topology
+  \end{itemize}
+
+\end{itemize}
+
+
+\end{frame}
+\section{System Specification}
+\begin{frame}{System Specification}
+\begin{itemize}
+  \item Used following system to test and evaluate the given task 
+  \begin{itemize}
+  	\item Linux System
+  	\item Memory:3.8 GB
+  	\item Processor: Intel CoreTM 		  i5-4210U CPU @ 1.70GHz
+  	\item OS Type : 64-bit
+
+  \end{itemize}
+\item Software Specification
+  \begin{itemize}
+  	\item NS3 Network Simulator
+  	\item Wireshark-Packet Analyser
+  	\item Eclipse IDE
+  \end{itemize}
+\end{itemize}
+\end{frame}
+\section{Configuration of three topologies}
+\begin{frame}{Configuration of three topologies}
+\begin{itemize}
+	\item Used csma channel in between the wifi access points(Network address:192.168.0.x)
+	\item Used point to point connection between wifi ap and dedicated servers(Network address:172.16.x.x) and wireless connection between wifi station points and wifi ap(Network address:10.0.x.x)
+	\item Used UDP stream of 3.584Mb file(number of packets:3500) and echo the stream between the stations and servers
+	\item Csma channel
+	\begin{itemize}
+		\item Data Rate:10Mbps
+		\item Channel Delay :5ms
+	\end{itemize}
+	\item P2P channel
+	\begin{itemize}
+		\item Data Rate:5Mbps
+		\item Channel Delay :5ms
+	\end{itemize}
+	
+\end{itemize}
+\end{frame}
+\section{Edge Computing Topology}
+
+\begin{frame}{Edge Computing Topology}
+\begin{figure}
+\includegraphics[width=7cm, height=4cm]{edgecomp}
+\centering
+\end{figure}
+
+\begin{itemize}
+	\item Implemented 3 wireless networks(each contains 6 stations) and 3 local servers. 
+	\item Sent the udp stream from each station to the corresponding local servers and measured the round trip time,delta time and maximum packets it sent
+	\item Round trip time: Time taken between the source and destination to complete its communication
+
+\end{itemize}
+
+\end{frame}
+
+\section{Edge Computing Topology}
+
+\begin{frame}{Edge Computing Topology}
+\begin{itemize}
+	\item Maximum round trip time taken by node with ip address(10.0.0.7) is 35.243sec
+	\item Round trip time taken by nodes ranges from 34.97sec(ip address:10.0.0.5) to 35.293(ip address:10.0.2.6)
+	\item Delta time: time difference between the previous and current frames
+	\item Maximum delta time is .0532sec
+	\item Total Packets(Packets A$\,\to\,$B and Packets B$\,\to\,$A) sent and received ranges from 5698(2849 in one direction) to 7000(3500 in one direction)
+	\item Throughput ranges from 570k bps to 843k bps
+	\item Average Throughput is 776k 
+	
+
+\end{itemize}
+\end{frame}
+
+\section{Edge Cloud Topology}
+
+\begin{frame}{Edge Cloud Topology}
+\begin{figure}
+\includegraphics[width=7cm, height=4cm]{edgecloud_comp}
+\centering
+\end{figure}
+
+\begin{itemize}
+	\item Here stations belong to two different wireless networks share a common cloud
+	\item Implemented six wireless networks(each contains 4 stations) and 3 local servers.
+	\item Maximum round trip time taken by node with ip address(10.0.0.7) is 38.137sec
+
+\end{itemize}
+
+\end{frame}
+\section{Edge Cloud Topology}
+
+\begin{frame}{Edge Cloud Topology}
+\begin{itemize}
+	\item Round trip time taken by nodes ranges from 34.99sec(ip address:10.0.0.1) to 38.137(ip address:10.0.3.5)
+	\item Maximum delta time is .1032sec
+	\item Total Packets(Packets A$\,\to\,$B and Packets B$\,\to\,$A) sent and received ranges from 632(316 in one direction) to 7000(3500 in one direction)
+	\item Throughput ranges from 70k bps to 843k bps
+	\item Average Throughput is 454k 
+	
+
+\end{itemize}
+\end{frame}
+
+\section{Cloud Computing Topology}
+
+\begin{frame}{Cloud Computing Topology}
+\begin{figure}
+\includegraphics[width=7cm, height=4cm]{cloud_comp}
+\centering
+\end{figure}
+
+\begin{itemize}
+	\item Here all stations share a common cloud
+	\item Implemented 3 wireless networks(each contains 6 stations) and a main server.
+	\item Maximum round trip time taken by node with ip address(10.0.0.4) is 40.311sec
+
+\end{itemize}
+
+\end{frame}
+\section{Cloud Computing Topology}
+
+\begin{frame}{Cloud Computing Topology}
+\begin{itemize}
+	\item Round trip time taken by nodes ranges from 38.06sec(ip address:10.0.2.7) to 40.311(ip address:10.0.0.4)
+	\item Maximum delta time is .832sec
+	\item Total Packets(Packets A$\,\to\,$B and Packets B$\,\to\,$A) sent and received ranges from 698(349 in one direction) to 6276(3138 in one direction)
+	\item Throughput ranges from 79k bps to 758k bps
+	\item Average Throughput is 283k 
+	
+
+\end{itemize}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+	\item As expected,edge computing topology showed better throughput,less round trip time and delta time
+	\item Cloud computing could not perform well since the limitations of the channel bandwidth and high number of stations
+\end{itemize}
+\end{frame}
+\end{document}
+
+
