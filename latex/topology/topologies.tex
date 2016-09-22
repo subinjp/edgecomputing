@@ -80,18 +80,22 @@
 \section{Configuration of three topologies}
 \begin{frame}{Configuration of three topologies}
 \begin{itemize}
-	\item Used csma channel in between the wifi access points(Network address:192.168.0.x)
+	\item Used csma channel in between the wifi access points$($Network address:192.168.0.x$)$
 	\item Used point to point connection between wifi ap and dedicated servers(Network address:172.16.x.x) and wireless connection between wifi station points and wifi ap(Network address:10.0.x.x)
-	\item Used UDP stream of 3.584Mb file(number of packets:3500) and echo the stream between the stations and servers
+	\item Used TCP stream at different data rates
 	\item Csma channel
 	\begin{itemize}
-		\item Data Rate:10Mbps
-		\item Channel Delay :5ms
+		\item Data Rate:1000Mbps
+		\item Channel Delay :65600ns
 	\end{itemize}
 	\item P2P channel
 	\begin{itemize}
-		\item Data Rate:5Mbps
-		\item Channel Delay :5ms
+		\item Data Rate:1000Mbps
+		\item Channel Delay :25000ns
+	\end{itemize}
+	\item Wireless channel$($802.11ac$)$
+	\begin{itemize}
+		\item Data Rate:1040Mbps
 	\end{itemize}
 	
 \end{itemize}
@@ -105,9 +109,9 @@
 \end{figure}
 
 \begin{itemize}
-	\item Implemented 3 wireless networks(each contains 6 stations) and 3 local servers. 
-	\item Sent the udp stream from each station to the corresponding local servers and measured the round trip time,delta time and maximum packets it sent
-	\item Round trip time: Time taken between the source and destination to complete its communication
+	\item Implemented 3 wireless networks(each contains 10 stations) and 3 local servers. 
+	\item Sent the TCP stream from each station to the corresponding local servers and measured the round trip time,latency,throughput
+	\item Round trip time: Time taken between the source and destination to complete its conversation
 
 \end{itemize}
 
@@ -117,7 +121,7 @@
 
 \begin{frame}{Edge Computing Topology}
 \begin{itemize}
-	\item Maximum round trip time taken by node with ip address(10.0.0.7) is 35.243sec
+	\item Maximum round trip time
 	\item Round trip time taken by nodes ranges from 34.97sec(ip address:10.0.0.5) to 35.293(ip address:10.0.2.6)
 	\item Delta time: time difference between the previous and current frames
 	\item Maximum delta time is .0532sec
@@ -188,6 +192,35 @@
 
 \end{itemize}
 \end{frame}
+
+\section{Results}
+\begin{frame}{Results}
+\begin{table}[h!]
+\begin{center}
+\caption{Comparison of different attributes}
+\label{tab:table1}
+\begin{tabular}{ |p{2.9cm}|p{2.5cm}|p{2cm}|p{2.5cm}|  }
+ \hline
+  & Edge \newline computing & Edge \newline Cloud & Cloud\newline Computing\\ 
+ \hline
+ Total Packets & 3293675 & 4200985 & 4294923\\
+ \hline
+ TCP \newline Retransmission \newline(packets)  & 294 & 5973 &8586\\
+ \hline
+ Lost Packets & 294 & 1794 & 2822 \\ 
+ \hline
+ Maximum \newline Throughput(Mbps) & 10.8 & 10.7 & 10.7\\
+ \hline 
+ Minimum \newline Throughput(Mbps) & 9.57 & 2.63 & 1.06 \\
+ \hline
+ Maximum \newline Latency & 1.03 & 3.0 &4.01 \\
+ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\end{frame}
+
 
 \section{Conclusion}
 

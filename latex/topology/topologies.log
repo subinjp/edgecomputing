@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.5)  6 SEP 2016 00:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.5)  22 SEP 2016 00:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -925,39 +925,56 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [4
 
 ]
-<figures/edgecomp.png, id=79, 794.97pt x 280.04625pt>
+<figures/edgecomp.png, id=83, 794.97pt x 280.04625pt>
 File: figures/edgecomp.png Graphic file (type png)
 
 <use figures/edgecomp.png>
-Package pdftex.def Info: figures/edgecomp.png used on input line 114.
+Package pdftex.def Info: figures/edgecomp.png used on input line 118.
 (pdftex.def)             Requested size: 199.16656pt x 113.81123pt.
  [5
 
  <./figures/edgecomp.png>] [6
 
 ]
-<figures/edgecloud_comp.png, id=93, 845.1575pt x 280.04625pt>
+<figures/edgecloud_comp.png, id=97, 714.67pt x 280.04625pt>
 File: figures/edgecloud_comp.png Graphic file (type png)
 
 <use figures/edgecloud_comp.png>
-Package pdftex.def Info: figures/edgecloud_comp.png used on input line 147.
-(pdftex.def)             Requested size: 199.16656pt x 113.81123pt.
+Package pdftex.def Info: figures/edgecloud_comp.png used on input line 151.
+(pdftex.def)             Requested size: 199.1684pt x 113.81123pt.
  [7
 
  <./figures/edgecloud_comp.png>] [8
 
 ]
-<figures/cloud_comp.png, id=106, 768.8725pt x 355.3275pt>
+<figures/cloud_comp.png, id=110, 810.02625pt x 285.065pt>
 File: figures/cloud_comp.png Graphic file (type png)
 
 <use figures/cloud_comp.png>
-Package pdftex.def Info: figures/cloud_comp.png used on input line 177.
-(pdftex.def)             Requested size: 199.16301pt x 113.81012pt.
+Package pdftex.def Info: figures/cloud_comp.png used on input line 181.
+(pdftex.def)             Requested size: 199.16885pt x 113.81084pt.
  [9
 
  <./figures/cloud_comp.png>] [10
 
-] [11
+]
+Overfull \hbox (5.48282pt too wide) in paragraph at lines 222--222
+\OT1/cmss/m/n/10.95 Throughput(Mbps)| 
+ []
+
+
+Overfull \hbox (5.48282pt too wide) in paragraph at lines 222--222
+\OT1/cmss/m/n/10.95 Throughput(Mbps)| 
+ []
+
+
+Overfull \hbox (22.39221pt too wide) in paragraph at lines 222--222
+ [] 
+ []
+
+[11
+
+] [12
 
 ]
 \tf@nav=\write6
@@ -969,39 +986,38 @@ Package pdftex.def Info: figures/cloud_comp.png used on input line 177.
 \tf@snm=\write8
 \openout8 = `topologies.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 200.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
-
-(./topologies.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 200.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 200.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
+ (./topologies.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 233.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
 Package rerunfilecheck Info: File `topologies.out' has not changed.
-(rerunfilecheck)             Checksum: 039CD03F59CA35144A7C6973C468DFB7;559.
+(rerunfilecheck)             Checksum: 2A2189BBF0EE82ADF2E0D63E61108BA4;603.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 200.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 233.
  ) 
 Here is how much of TeX's memory you used:
- 17126 strings out of 494910
- 324210 string characters out of 6179837
- 410784 words of memory out of 5000000
- 19980 multiletter control sequences out of 15000+600000
+ 17160 strings out of 494910
+ 324820 string characters out of 6179837
+ 413816 words of memory out of 5000000
+ 20010 multiletter control sequences out of 15000+600000
  11559 words of font info for 43 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 48i,11n,51p,390b,396s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,11n,51p,390b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on topologies.pdf (11 pages, 121336 bytes).
+Output written on topologies.pdf (12 pages, 121128 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 167 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
