@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 \beamer@endinputifotherversion {3.33pt}
+=======
+\beamer@endinputifotherversion {3.36pt}
+>>>>>>> a768e6d35e5f5c2746483e50605e6bd25a5e7f09
 \select@language {english}
 \beamer@sectionintoc {1}{Introduction}{2}{0}{1}
 \beamer@sectionintoc {2}{System Specification}{3}{0}{2}
 \beamer@sectionintoc {3}{Configuration of three topologies}{4}{0}{3}
 \beamer@sectionintoc {4}{Edge Computing Topology}{5}{0}{4}
+<<<<<<< HEAD
 \beamer@sectionintoc {5}{Edge Cloud Topology}{6}{0}{5}
 \beamer@sectionintoc {6}{Cloud Computing Topology}{7}{0}{6}
 \beamer@sectionintoc {7}{Experiment and Results}{8}{0}{7}
@@ -15,3 +20,12 @@
 \beamer@sectionintoc {13}{Experiment and Results}{14}{0}{13}
 \beamer@sectionintoc {14}{Experiment and Results}{15}{0}{14}
 \beamer@sectionintoc {15}{Conclusion}{16}{0}{15}
+=======
+\beamer@sectionintoc {5}{Edge Computing Topology}{6}{0}{5}
+\beamer@sectionintoc {6}{Edge Cloud Topology}{7}{0}{6}
+\beamer@sectionintoc {7}{Edge Cloud Topology}{8}{0}{7}
+\beamer@sectionintoc {8}{Cloud Computing Topology}{9}{0}{8}
+\beamer@sectionintoc {9}{Cloud Computing Topology}{10}{0}{9}
+\beamer@sectionintoc {10}{Results}{11}{0}{10}
+\beamer@sectionintoc {11}{Conclusion}{12}{0}{11}
+>>>>>>> a768e6d35e5f5c2746483e50605e6bd25a5e7f09
