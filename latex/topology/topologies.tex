@@ -1,0 +1,277 @@
+\documentclass{beamer}
+
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {figures/} }
+\usepackage{siunitx}
+\DeclareSIUnit[per-mode=symbol,per-symbol=p]{\MBps}{\mega\byte\per\second}
+\DeclareSIUnit\giga{G}
+\DeclareSIUnit\byte{B}
+\DeclareSIUnit\bit{bit}
+
+\sisetup{per-mode=symbol}
+
+\usepackage{bookmark}
+
+\title[Your Short Title]{Performance comparison of different topologies}
+\author{Subin Joseph}
+\institute{TU Kaiserslautern}
+\date{27/09/2016}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+%\begin{frame}{Outline}
+%  \tableofcontents
+%\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Introduction}
+
+
+
+\begin{itemize}
+  \item Focus on the reliability comparison of different topologies through a quantitative study
+  \item Compare the data latency,throughput and packet loss of following topolgies
+  \begin{itemize}
+  	\item Edge computing topology
+  	\item Cloud computing topology
+  	\item Edge plus cloud computing topology
+  \end{itemize}
+
+\end{itemize}
+
+
+\end{frame}
+\section{System Specification}
+\begin{frame}{System Specification}
+\begin{itemize}
+  \item Used following system to test and evaluate the given task 
+  \begin{itemize}
+  	\item Linux System
+  	\item Memory:\SI{15.5}{\giga\byte}
+  	\item Processor: Intel CoreTM i3-6100 CPU @ 3.70GHz × 4 
+  	\item OS Type :\SI{64}{\bit}
+
+  \end{itemize}
+\item Software Specification
+  \begin{itemize}
+  	\item NS3 Network Simulator
+  	\item Wireshark-Packet Analyser
+  	\item Eclipse IDE
+  \end{itemize}
+\end{itemize}
+\end{frame}
+\section{Configuration of three topologies}
+\begin{frame}{Configuration of three topologies}
+\begin{itemize}
+	\item Used csma channel in between the WI-FI access points\big(Network address:192.168.0.x\big)
+	\item Used point to point connection between WI-FI AP and dedicated servers\big(Network address:172.16.x.x\big) and wireless connection between wifi station points and wifi ap\big(Network address:10.0.x.x\big)
+	\item Used UDP stream 
+	\item Csma channel
+	\begin{itemize}
+		\item Data Rate:\SI{1000}Mbps
+		\item Channel Delay:\SI{65600}{\nano\second}
+	\end{itemize}
+	\item P2P channel
+	\begin{itemize}
+		\item Data Rate:\SI{1000}Mbps
+		\item Channel Delay:\SI{25000}{\nano\second}
+	\end{itemize}
+	\item Wireless channel\big(802.11ac\big)
+	\begin{itemize}
+		\item Data Rate:\SI{1040}Mbps
+	\end{itemize}
+	
+\end{itemize}
+\end{frame}
+\section{Edge Computing Topology}
+
+\begin{frame}{Edge Computing Topology}
+\begin{figure}
+\includegraphics[width=7cm, height=4cm]{edgecomp}
+\centering
+\end{figure}
+
+\begin{itemize} 
+	\item Stations belong to a wireless network communicate to the corresponding local server attached near to the wireless access 
+\end{itemize}
+
+\end{frame}
+
+\section{Edge Cloud Topology}
+
+\begin{frame}{Edge Cloud Topology}
+\begin{figure}
+\includegraphics[width=7cm, height=4cm]{edgecloud_comp}
+\centering
+\end{figure}
+
+\begin{itemize}
+	\item Here stations belong to two different wireless networks share a common cloud
+	
+\end{itemize}
+\end{frame}
+
+\section{Cloud Computing Topology}
+
+\begin{frame}{Cloud Computing Topology}
+\begin{figure}
+\includegraphics[width=7cm, height=4cm]{cloud_comp}
+\centering
+\end{figure}
+
+\begin{itemize}
+	\item Here all stations belong to different wireless networks share a common cloud
+
+\end{itemize}
+\end{frame}
+\section{Experiment and Results}
+\begin{frame}{Experiment and Results}
+
+\begin{itemize}
+	\item Sent the UDP stream at the rate of \SI{10}Mbps from each station to the corresponding local servers and server sent back the stream at the same data rate to stations
+	\item Measured the latency,throughput
+	\item Latency: Difference between the time at which source send the packet and received the packet
+	\item Time duration:\SI{10}{\second}
+\end{itemize}
+\end{frame}
+\section{Experiment and Results}
+\begin{frame}{Experiment and Results\big(Edge Computing\big)}
+\begin{figure}
+\includegraphics[width=8cm, height=6cm]{edgecomp_26}
+\centering
+\end{figure}
+\begin{itemize}
+	\item maximum latency experienced is \SI{.1182}{\second}
+	\item minimum latency experienced is \SI{.00026}{\second} 
+\end{itemize}
+
+\end{frame}
+\section{Experiment and Results}
+\begin{frame}{Experiment and Results\big(Edge Computing\big)}
+\begin{figure}
+\includegraphics[width=8cm, height=6cm]{edgecompthrough}
+\centering
+\end{figure}
+\begin{itemize}
+
+	\item maximum throughput achieved is \SI{10.59}Mbps
+	\item minimum throughput achieved is \SI{10.47}Mbps
+	\item Average throughput achieved is \SI{10.48}Mbps
+\end{itemize}
+
+\end{frame}
+
+\section{Experiment and Results}
+\begin{frame}{Experiment and Results\big(Edge Cloud\big)}
+\begin{figure}
+\includegraphics[width=8cm, height=6cm]{edgecloudlog26}
+\centering
+\end{figure}
+\begin{itemize}
+	\item maximum latency experienced is \SI{1.854}{\second}
+	\item minimum latency experienced is \SI{.00043}{\second} 
+\end{itemize}
+
+\end{frame}
+\section{Experiment and Results}
+\begin{frame}{Experiment and Results\big(Edge Cloud\big)}
+\begin{figure}
+\includegraphics[width=8cm, height=6cm]{edgecloud}
+\centering
+\end{figure}
+\begin{itemize}
+
+	\item maximum throughput achieved is \SI{10.50}Mbps
+	\item minimum throughput achieved is \SI{1.78}Mbps
+	\item Average throughput achieved is \SI{6.51}Mbps
+\end{itemize}
+
+\end{frame}
+\section{Experiment and Results}
+\begin{frame}{Experiment and Results\big(Cloud Computing\big)}
+\begin{figure}
+\includegraphics[width=8cm, height=6cm]{newcloudlatency}
+\centering
+\end{figure}
+\begin{itemize}
+	\item maximum latency experienced is \SI{2.145}{\second}
+	\item minimum latency experienced is \SI{.0237}{\second} 
+\end{itemize}
+
+\end{frame}
+\section{Experiment and Results}
+\begin{frame}{Experiment and Results\big(Cloud Computing\big)}
+\begin{figure}
+\includegraphics[width=8cm, height=6cm]{cloudth}
+\centering
+\end{figure}
+\begin{itemize}
+
+	\item maximum throughput achieved is \SI{4.87}Mbps
+	\item minimum throughput achieved is \SI{0.721}Mbps
+	\item Average throughput achieved is \SI{1.80}Mbps
+\end{itemize}
+
+\end{frame}
+\section{Experiment and Results}
+\begin{frame}{Experiment and Results}
+\begin{table}
+\centering
+\caption{Comparison of different attributes}
+\label{tab:table1}
+\begin{tabular}{ |p{2.85cm}|p{2.5cm}|p{2cm}|p{2.5cm}|  }
+ \hline
+  Parameters & Edge \newline computing & Edge \newline Cloud & Cloud\newline Computing\\ 
+ \hline
+ Max Packets \newline sent \&\ received& 39966 & 39982 & 15598\\
+ \hline
+ Min Packets \newline sent \&\ received & 39868 & 9973 & 2746\\
+ \hline
+ Avg Packets \newline sent \&\ received & 39911 & 28703 & 6391 \\ 
+ \hline
+ Max \newline Throughput\big(Mbps\big) & 10.59 & 10.50 & 4.87\\
+ \hline 
+ Minimum \newline Throughput\big(Mbps\big) & 10.47 & 1.78 & 0.721 \\
+ \hline
+Average \newline Throughput\big(Mbps\big) & 10.48 & 6.51 & 1.80 \\
+ \hline
+\end{tabular}
+\end{table}
+
+\end{frame}
+\section{Conclusion}
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+	\item As expected,edge computing topology showed better results because of the dedicated servers for each wireless network
+	\item Most of the stations in the cloud computing topology experienced high latency,less throughput 
+\end{itemize}
+\end{frame}
+\end{document}
+
+

@@ -1,0 +1,17 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{System Specification}{3}{0}{2}
+\beamer@sectionintoc {3}{Configuration of three topologies}{4}{0}{3}
+\beamer@sectionintoc {4}{Edge Computing Topology}{5}{0}{4}
+\beamer@sectionintoc {5}{Edge Cloud Topology}{6}{0}{5}
+\beamer@sectionintoc {6}{Cloud Computing Topology}{7}{0}{6}
+\beamer@sectionintoc {7}{Experiment and Results}{8}{0}{7}
+\beamer@sectionintoc {8}{Experiment and Results}{9}{0}{8}
+\beamer@sectionintoc {9}{Experiment and Results}{10}{0}{9}
+\beamer@sectionintoc {10}{Experiment and Results}{11}{0}{10}
+\beamer@sectionintoc {11}{Experiment and Results}{12}{0}{11}
+\beamer@sectionintoc {12}{Experiment and Results}{13}{0}{12}
+\beamer@sectionintoc {13}{Experiment and Results}{14}{0}{13}
+\beamer@sectionintoc {14}{Experiment and Results}{15}{0}{14}
+\beamer@sectionintoc {15}{Conclusion}{16}{0}{15}
